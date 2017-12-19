@@ -1,0 +1,616 @@
+@charset "utf-8";
+/* CSS Document */
+/**/
+
+*{
+	box-sizing: border-box; /*упрошает установку размеров всех наших элементов*/
+}
+
+section, footer, header{
+	margin: 0px auto; 
+	padding: 0 30px;
+	width:940px;
+	
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both; /*очищаем float*/
+}
+
+
+/*
+  ========================================
+  Типографика
+  ========================================
+*/
+body {
+  background: #80E9D0; /*устанавливаем цвет фона*/
+  background: radial-gradient(closest-corner at 50% 70%, #BCE8C9 40%, #11B790) no-repeat, #68d0ad; /*устанавливаем цвет фона*/
+  color: #888;
+  font: 300 16px/22px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  line-height: 1;
+}
+
+h1, h3, p {
+  margin-bottom: 22px; /*установим некоторое вертикальное пространство между элементами*/
+}
+
+/*Ссылки*/
+a {
+  color: #648880;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #a9b2b9;
+  text-decoration: none;
+}
+
+p a {
+  border-bottom: 1px solid #dfe2e5; /*Мы могли бы использовать свойство text-decoration вместо border-bottom для подчёркивания ссылок внутри каждого абзаца, однако с помощью свойства border-bottom мы получим больше контроля над внешним видом подчёркивания*/
+}
+
+/*
+  ========================================
+  навигация
+  ========================================
+*/
+.navigation{
+	text-align: right; /*выравниваем наше меню по левому краю*/
+ }
+
+.navigation li{
+  display: inline-block; /*чтобы список выравнивались в строке по горизонтали*/
+  margin: 0 10px; /*внешние левые оступы, чтобы между элементами была пространство */
+}
+
+.navigation li:last-child {
+  margin-right: 0; /*определяем последний элемент и сбрасываем правый внешнй отступ (Это гарантирует, что любое горизонтальное пространство между элементами <li> и краем его родителя исчезнет.) */
+}
+
+/*
+  ========================================
+  контакты
+  ========================================
+*/
+#pos_fb{
+position: fixed;
+top: 150px;
+left: -15px;
+transition: left 0.3s linear;
+}
+ 
+#pos_vk{
+position: fixed;
+top: 260px;
+left: -15px;
+transition: left 0.3s linear;
+}
+
+#pos_fb:hover, #pos_vk:hover{
+left: 0px;
+}
+
+/*
+  ========================================
+  шапка
+  ========================================
+*/
+.primary-header{
+	
+}
+
+.primary-header h1{
+  float: left; /*обтикания нашего заголовка справа*/
+  border-top: 4px solid #648880; /*устанавливаем верхую рамку для заголовка ради украшения*/
+  padding: 20px 0 0px 0px; /*устанавливаем внутренее отступ сверху и снизу для заголовка*/
+  margin-top: 0px; /*убираем верхние отступы, чтобы прижемался в плотную к шапке*/
+  
+}
+
+header .navigation{
+  margin-top: 60px; /*верхний отступ для менюшек, чтобы было по середине*/
+  font-size: 13px; /*размер букв для менюшек*/
+  font-weight: 400; /*жирность букв для менюшек*/
+  letter-spacing: .1px; /*расстояние между букв для менюшек*/
+  text-transform: uppercase; /*устанавливает заглавную букву у менюшек*/
+  text-align: right;
+  width: 900px;
+  
+}
+
+/*типография*/
+h1 {
+  color: #648880;
+  font-size: 48px;
+  line-height: 44px;
+  font-weight: 100;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.primary-header a{
+	color: #fff;
+}
+
+.primary-header a:hover{
+	color: #648880;
+}
+
+.primary-header p{
+	  margin: 0px;
+	  text-align: right;
+}
+
+/*
+  ========================================
+  презентация (секция 1-1)
+  ========================================
+*/
+
+.row{
+  background: #cbe2c1;
+  background: -webkit-linear-gradient(to right, #a1d3b0, #f6f1d3);
+  background: -moz-linear-gradient(to right, #a1d3b0, #f6f1d3);
+  background: linear-gradient(to right, #a1d3b0 20%, #f6f1d3);
+  padding: 44px 0 22px 0;
+}
+
+.hero{
+	padding: 22px 80px 66px 80px; /*устанавливаем padding для всех четырёх сторон элемента*/
+	text-align: center; /*выравниваем все по центру*/
+}
+
+/*кнопка приступить*/
+.btn{
+	cursor: pointer; /*при наведения на кнопку "приступить" меняет курсор*/
+	
+	font-weight: 400;
+	font-size: 24px;
+	letter-spacing: .5px;
+
+	 
+	margin: 0px; /*убираем отступы, для кнопки "приступит*/
+	padding: 10px 30px; /* устанавливаем внутренее отступы, для кнопки "приступить"*/
+	
+	border: 1px solid #dfe2e5; /*устанавливаем рамку, для кнопки "приступит*/
+	border-radius: 5px; /*скругливаем рамку, для кнопки "приступит*/
+	
+	letter-spacing: .5px; /*расстояние между букв для кнопки надписи "приступить"*/
+	font-weight: 400; /*жирность надписи для кнопки "приступтьи"*/
+}
+
+
+.btn:hover{
+  background: #F0EACC; /*при наведения на кнопку "приступить" меняет цвет фона*/
+  color: #648880; /*при наведения на кнопку "приступить" меняет цвет текста*/
+}
+
+/*типография*/
+.hero h2 {
+  font-size: 36px;
+}
+
+.hero p{
+  font-size: 24px;
+  margin-bottom: 35px;
+}
+
+/*
+  ========================================
+  тизер (секция 1-2)
+  ========================================
+*/
+
+.grid{
+  padding-left: 15px; /*помещаем некоторое пространство для сетки*/
+  padding-right: 15px; /*поместить некоторое пространство для сеткик*/
+}
+
+.grid div{
+	display: inline-block; /*строим колонки в ряд*/
+	vertical-align: top; /*перемещаем  колонкина верхную граниицу родителя <div class="grid"> */
+	
+	width: 33.33%; /*устанавливаем ширину колонок 30% от его родителя section*/
+	min-height: 200px; 
+	
+	padding-left: 15px; /*помещаем некоторое пространство слева между колонок*/
+  padding-right: 15px; /*поместить некоторое пространство справо между колонок*/
+	
+	border-radius: 50px; 
+  overflow: hidden; /*Отображается только область внутри элемента, остальное будет скрыто*/
+	transition: background 3s linear; /*при наведения на блок меняет цвет*/
+}
+
+.grid div:hover{
+	background: rgba(0,0,0,.05); /*при наведения на блок меняет цвет*/
+}
+
+/*изображение*/
+.grid img{
+  display: block;
+
+  max-width: 100%; /*е установим их максимальную ширину, чтобы гарантировать, что они не превышают ширину соответствующих им колонок.*/
+	border-radius: 20px; /*изменим изображения в разделе с тизерами на блочные элементы*/
+	box-shadow: 5px 5px 40px black; /*тень для элемента*/
+	opacity: 0.8; /*прозрачность изображения*/
+	transition: opacity 0.3s linear;
+}
+
+.grid img:hover{
+	opacity: 1; /*при наведения на изображения становиться непрозрачным*/
+}
+
+
+/*типография*/
+.grid h3{
+  color: #676767; /*цвет текста у заголовка колонки*/
+  font-size: 20px; /*размер букв у заголовка колонки*/
+  font-weight: 400; /*жирность у заголовка колонки*/
+}
+
+.grid a:hover h3 {
+  color: #a9b2b9; /*при наведения на заголово колонкик меняется цвет*/
+}
+
+.grid p{
+	font-size: 15px; /*меняем размер шрифта у колонок*/
+}
+
+/*
+  ========================================
+  лекций (секция 4)
+  ========================================
+*/
+.lecture{
+  background: #e6fdff; /*для того, чтобы обернуть всех "учебники"" и применить белый фон и поля за нимий*/
+  padding: 44px 0 22px 0; 
+  color: black;
+}
+
+.lecture h4{
+  text-align: center;
+  font-weight: 600; /*жирность*/
+  font-size: 20px;/*размер символа*/
+}
+
+.lecture p{
+  text-align: justify;
+  font-weight: 400; /*жирность*/
+  font-size: 15px;/*размер символа*/
+}
+
+.lecture img{
+  float: left;
+  padding: 5px;
+}
+
+/*
+  ========================================
+  семинар (секция 4)
+  ========================================
+*/
+.seminar{
+  background: #fff; /*для того, чтобы обернуть всех "учебники"" и применить белый фон и поля за нимий*/
+  padding: 44px 0 22px 0; 
+}
+
+.seminar table{
+  border-collapse: collapse; /*позволяет соединять одну границу с другой*/
+  border-spacing: 0px;
+  
+
+  margin-bottom: 44px;
+  width: 100%;
+}
+
+.seminar table:last-child {
+  margin-bottom: 0; /*уберём нижний отступ для последнего таблицы*,  Это предотвратит конфликт этой таблицы с нижним padding, принадлежащему элементу <section> с классом row.*/
+}
+
+/*заголовок таблицы*/
+.seminar caption{
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600; /*жирность*/
+  text-shadow: 1px 1px 10px #484545; /*тень для текста*/
+  letter-spacing: .5em; /*расстояние между букв*/
+  color: #3e7f71;
+}
+
+/*типографика таблицы*/
+.seminar table a{
+  color: #888;
+}
+
+.seminar table h4 {
+  margin-bottom: 0;
+}
+
+/*шапка, тело и подвал таблицы*/
+.seminar th, td{
+  padding-bottom: 22px; /*добавим нижний отсуп*/
+  vertical-align: top; /*вертикальное выравнивание*/
+  //border: 1px solid;
+}
+
+.seminar th {
+  width: 20%;
+  padding-right: 45px;
+  text-align: right;
+  vertical-align: middle;
+}
+
+.seminar td {
+  width: 80%;
+}
+
+/*шапка таблицы*/
+.seminar thead {
+  line-height: 44px;
+  color: #648880;
+  font-size: 24px;
+  padding-bottom: 0px; 
+}
+
+.seminar thead th, .seminar thead td{
+  padding-bottom: 0px; 
+}
+
+
+
+/*тело таблицы*/
+.seminar tbody th {
+  color: #a9b2b9;
+  font-size: 14px;
+  font-weight: 400;
+  padding-top: 22px;
+  text-transform: uppercase;
+}
+
+.seminar tbody td {
+  border-top: 1px solid #dfe2e5;
+  padding-top: 21px;
+}
+.seminar tbody td:first-of-type {
+  padding-right: 15px;
+}
+.seminar tbody td:last-of-type {
+  padding-left: 15px;
+}
+.seminar tbody td:only-of-type {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/*подвал таблицы*/
+.seminar tfoot{
+  border-top: 1px solid #dfe2e5;
+}
+
+.seminar tfoot th{
+  text-align: center;
+  color: black;
+  padding-top: 10px
+}
+
+.seminar tfoot th h2{
+font-size: 15px;
+}
+
+.seminar tfoot th p{
+font-size: 10px;
+font-weight: 400; /*жирность*/
+}
+
+.seminar tfoot iframe{
+  width: 100%;
+}
+
+
+
+
+
+
+
+/*
+  ========================================
+  учебники (секция 5)
+  ========================================
+*/
+.book{
+  background: #fff; /*для того, чтобы обернуть всех "учебники"" и применить белый фон и поля за нимий*/
+  padding: 44px 0 22px 0; 
+}
+
+.book section{
+  margin-bottom: 44px; /*учебники ставались на равном расстоянии друг от друга по вертикали.*/
+}
+
+.block1
+{
+  display: inline-block;
+  width: 80%;
+}
+
+.block2
+{
+  display: inline-block;
+  width: 20%;
+  border: 1px solid #dfe2e5;
+  margin-top: 88px; /*добавим верхний отступ, чтобы поместить элемент на той же вертикальной строке, что и первый абзац докладчика*/
+  padding-bottom: 30px; /*отступ снизу, чтобы обеспечить место для вложенного маркированного списка*/
+  text-align: center;
+}
+
+
+
+.block2 img{
+  border-radius: 50%; /*превращая наши изображения в круги*/
+  margin: -66px 0 22px 0; /*вытянем немного изображения из элемента <aside> и выровняем по центру верхней границы элемента <div> и обеспечивает пространство между изображением и элементом <ul> ниже него*/
+  vertical-align: top; 
+  width: 130px;
+  height: 130px
+  
+}
+
+/*типографика*/
+.block1 h3{
+  color: black;
+  font-weight: 500; /*жирность*/
+  font-size: 20px;/*размер символа*/
+  text-align: center; 
+  margin-bottom: 3px;
+}
+
+.block1 h4{
+  color: gray;
+  font-weight: 600; /*жирность*/
+  font-size: 16px;/*размер символа*/
+  margin-top: 5px;
+}
+
+.block1 p{
+  color: #6E6E6E;
+  font-weight: 400; /*жирность*/
+  font-size: 15px;/*размер символа*/
+}
+
+.book ul{
+  list-style-type: none;
+}
+
+/*
+  ========================================
+  Обратная связь (секция 7)
+  ========================================
+*/
+.Feedback{
+ background: #fff;
+ padding: 30px 0px;
+}
+/*информация*/
+.block1_info{
+  display: inline-block;
+  width: 60%;
+  vertical-align: top;
+  font: 300 16px/22px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+}
+
+.block1_info h2{
+  color: #648880;
+  font-size: 24px;
+  line-height: 44px;
+  font-weight: 500;
+}
+
+.block1_info h4{
+  color: #768c87;
+  margin-bottom: 0px; 
+}
+
+.block1_info ul{
+  list-style: square; /*стиль маркера списка*/
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+
+/*формы*/
+.block2_form{
+  display: inline-block;
+  width: 40%;
+  vertical-align: top;
+
+  margin-bottom: 22px; /*внешний отступ снизу формы, чтобы вертикальное пространство помогло отделить его от других элементов*/
+
+}
+
+.block2_form fieldset{
+  border: 0;
+
+}
+
+.block2_form input, .block2_form textarea{
+  border: 1px solid #c6c9cc;
+  border-radius: 5px;
+  color: #888;
+  font: 300 16px/22px "Roboto", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  display: block;
+  margin: 5px 0 27px 0;
+  padding: 5px 8px;
+  width: 100%;
+}
+
+.block2_form .button{
+  border: 0;
+  background: #6bd1ae;
+  padding: 11px 30px;
+  font-size: 14px;
+  cursor: pointer; /*при наведения на кнопку меняет курсор*/
+  border-radius: 5px; /*скругливаем рамку, для кнопки */
+  color: #fff;
+  width: 50%;
+}
+
+.block2_form .button:hover{
+   background: #77a198;
+}
+
+
+
+
+/*
+  ========================================
+  подвал
+  ========================================
+*/
+
+.primary-footer{
+  padding-bottom: 20px; /*устанавливаем внешний отступ снизу, что отделить подвал от остальной части страницы*/
+  padding-top: 20px; /*устанавливаем внешний отступ сверу, что отделить подвал от остальной части страницы*/
+  font-size: 14px; /*устанавливаем размер букв у всего подвала*/
+}
+
+
+.primary-footer .navigation{
+	
+  
+}
+
+/*типография*/
+
+.primary-footer a{
+	color: #fff;
+}
+
+.primary-footer a:hover{
+	color: #648880;
+}
+
+.primary-footer small a{
+  color: #648880; 
+  padding-right: 20px; /*устанавливаем внутренее отступ слева ради рамки для почтового адресса*/
+  border-right: 1px solid; /*устанавливаем рамку слева ради украшения*/
+  float: left; /*обтикания нашего почтового адреса справа*/
+  font-weight: 400; /*устанавливаем жирность для почтового адресса*/
+  margin-top: 14.5px;
+}
+
+.primary-footer small a:hover{
+  color: #028187; 
+}
+
+
+
+
+
+
+
